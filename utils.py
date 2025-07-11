@@ -11,8 +11,8 @@ load_dotenv()
 # api_key = os.getenv("MY_API_KEY")
 # model = os.getenv("MODEL")
 # Asumsi fungsi format_currency_short sudah didefinisikan
-st.secrets["MY_API_KEY"] == "api_key"
-st.secrets["MODEL"] == "model"
+api_key = st.secrets["MY_API_KEY"] 
+model = st.secrets["MODEL"]
 
 #print(api_key, model)  # Debugging: Pastikan api_key dan model diambil dengan benar
 
