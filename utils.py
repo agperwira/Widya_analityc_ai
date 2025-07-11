@@ -11,7 +11,7 @@ api_key = os.getenv("MY_API_KEY")
 model = os.getenv("MODEL")
 # Asumsi fungsi format_currency_short sudah didefinisikan
 
-print(api_key, model)  # Debugging: Pastikan api_key dan model diambil dengan benar
+#print(api_key, model)  # Debugging: Pastikan api_key dan model diambil dengan benar
 
 def format_currency_short(amount, decimal_places=2):
     """
