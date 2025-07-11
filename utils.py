@@ -7,9 +7,12 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Mengambil nilai variabel lingkungan
-api_key = os.getenv("MY_API_KEY")
-model = os.getenv("MODEL")
+# api_key = os.getenv("MY_API_KEY")
+# model = os.getenv("MODEL")
 # Asumsi fungsi format_currency_short sudah didefinisikan
+st.secrets["api_key"] == "MY_API_KEY"
+st.secrets["model"] == "MODEL"
+
 
 #print(api_key, model)  # Debugging: Pastikan api_key dan model diambil dengan benar
 
