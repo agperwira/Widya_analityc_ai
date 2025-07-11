@@ -8,7 +8,7 @@ col_1, col_2 = st.columns([1, 5])
 col_1.image("https://images.glints.com/unsafe/320x0/glints-dashboard.oss-ap-southeast-1.aliyuncs.com/company-logo/a2ebfb8120a9f7376b56e474d4c01562.jpeg", width=100)
 col_2.markdown("<h1 style='text-align: center;'>Dashboard Data Analitik</h1>", unsafe_allow_html=True)
 
-st.title("📊 Automatic Sales Dashboard Analitik!!")
+st.title("📊 Automatic Sales Dashboard Analitik")
 
 pages = {
     "Sales": [

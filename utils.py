@@ -1,8 +1,18 @@
 import pandas as pd
 import requests
 import json
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
+
+# Mengambil nilai variabel lingkungan
+api_key = os.getenv("MY_API_KEY")
+model = os.getenv("MODEL")
 # Asumsi fungsi format_currency_short sudah didefinisikan
+
+print(api_key, model)  # Debugging: Pastikan api_key dan model diambil dengan benar
+
 def format_currency_short(amount, decimal_places=2):
     """
     Mengubah nilai mata uang numerik menjadi format singkat (K, M, B).
@@ -135,8 +145,8 @@ def read_tabular_data_to_string(file_content, file_name: str) -> str | None:
 def get_openrouter_completion(
     prompt_text: str,
     system_instruction: str,
-    api_key: str = "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",
-    model: str = "mistralai/mistral-small-3.2-24b-instruct",
+    api_key: str = api_key,
+    model: str = model,
     temperature: float = 0.4,
     max_tokens: int = 1000, # Meningkatkan max_tokens untuk analisis yang lebih detail
     stream_response: bool = False,
@@ -211,7 +221,7 @@ def get_openrouter_completion(
             except (KeyError, TypeError) as e:
                 # Mengangkat Exception jika tidak dapat mengurai konten respons
                 print(f"Full response (JSON): {json.dumps(response_data, indent=2)}") # Untuk debugging
-                raise Exception(f"Tidak dapat mengurai konten respons: {e}")
+                raise Exception(f"cannot parse response content: {e}")
 
     except requests.exceptions.RequestException as e:
         # Mengangkat RequestException untuk kesalahan API
