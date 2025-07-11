@@ -200,7 +200,7 @@ if st.button("suggestion button"):
                 )
 
                 # Tampilkan hasil analisis AI
-                st.subheader("Hasil Analisis AI")
+                st.subheader("Result of ai analityc")
                 st.markdown(ai_response)
             else:
                 st.warning("AI response is empty.")
