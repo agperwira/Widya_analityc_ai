@@ -13,7 +13,7 @@ st.title("📊 Automatic Sales Dashboard Analitik")
 pages = {
     "Sales": [
         st.Page("Sales.py", title="Sales", url_path="sales_data", icon="💸"),
-        st.Page("learn.py", title="Product", url_path="sales_product_data", icon="📦"),
+        st.Page("custom_template.py", title="custom themplate", url_path="sales_product_data", icon="📦"),
     ],
     "Finance": [
         st.Page("learn.py", title="Invoice", url_path="finance_invoice_data", icon="🧾"),
