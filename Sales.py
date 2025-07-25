@@ -180,7 +180,7 @@ custom_prompt_text = st.text_area(
         height=300
     )
 
-st.subheader("analitic with AI")
+st.subheader("analytics with AI")
 if st.button("suggestion button"):
     if uploaded_file is not None:
         try:
@@ -200,7 +200,7 @@ if st.button("suggestion button"):
                 )
 
                 # Tampilkan hasil analisis AI
-                st.subheader("Result of ai analityc")
+                st.subheader("Result of ai analytics")
                 st.markdown(ai_response)
             else:
                 st.warning("AI response is empty.")
